@@ -1,0 +1,354 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+/* Importar fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos para o container principal */
+[data-testid="stAppViewContainer"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+}
+
+/* Estilos para o título */
+[data-testid="stTitle"] {
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    background: linear-gradient(90deg, #2563eb, #0284c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 10px 0;
+}
+
+/* Estilos para os sub-títulos */
+[data-testid="stSubheader"] {
+    color: #1e40af;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-left: 4px solid #2563eb;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para os inputs */
+[data-testid="stTextInput"] {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+[data-testid="stTextInput"]:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+[data-testid="stNumberInput"] {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+[data-testid="stNumberInput"]:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Estilos para os select boxes */
+[data-testid="stSelectbox"] {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+[data-testid="stSelectbox"]:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Estilo para as labels dos inputs */
+div.row-widget.stSelectbox > label, 
+div.row-widget.stNumberInput > label {
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Estilos para os botões */
+[data-testid="stButton"] button {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+[data-testid="stButton"] button:hover {
+    background: linear-gradient(90deg, #1d4ed8, #1e40af);
+    box-shadow: 0 6px 10px -1px rgba(37, 99, 235, 0.25), 0 4px 6px -1px rgba(37, 99, 235, 0.15);
+    transform: translateY(-1px);
+}
+
+[data-testid="stButton"] button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* Estilos para as métricas */
+[data-testid="stMetric"] {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+[data-testid="stMetric"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-color: rgba(191, 219, 254, 0.8);
+}
+
+[data-testid="stMetric"] label {
+    font-weight: 600;
+    color: #64748b;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+[data-testid="stMetric"] .metric-value {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-top: 5px;
+}
+
+/* Estilos para os cards */
+[data-testid="stCard"] {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+}
+
+[data-testid="stCard"]:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-color: rgba(191, 219, 254, 0.8);
+}
+
+/* Estilos para o gráfico */
+[data-testid="stPlotlyChart"], .stPlotlyChart {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Estilos para os gráficos matplotlib */
+.stPlot {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    margin: 20px 0;
+}
+
+/* Estilos para o sidebar */
+[data-testid="stSidebar"] {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-right: 1px solid #e2e8f0;
+}
+
+/* Estilos para os erros */
+[data-testid="stError"] {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px -1px rgba(248, 113, 113, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+[data-testid="stError"]:before {
+    content: '⚠️';
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Estilos para os sucessos */
+[data-testid="stSuccess"] {
+    background-color: #dcfce7;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+[data-testid="stSuccess"]:before {
+    content: '✅';
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Estilos para os info */
+[data-testid="stInfo"] {
+    background-color: #eef2ff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+[data-testid="stInfo"]:before {
+    content: 'ℹ️';
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Estilos para o loading */
+[data-testid="stLoading"] {
+    text-align: center;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin: 25px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Animação de loading */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+[data-testid="stLoading"] > div {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Estilos para o footer */
+[data-testid="stFooter"] {
+    text-align: center;
+    padding: 25px;
+    background-color: #f8fafc;
+    margin-top: 50px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Estilos para o layout responsivo */
+@media (max-width: 768px) {
+    [data-testid="stAppViewContainer"] {
+        padding: 15px;
+    }
+    
+    [data-testid="stMetric"] {
+        margin: 8px 0;
+    }
+}
+
+/* Estilos para os containers de colunas */
+div.css-ocqkz7.e1tzin5v4,
+div.css-1r6slb0.e1tzin5v2 {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+div.css-ocqkz7.e1tzin5v4:hover,
+div.css-1r6slb0.e1tzin5v2:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    border-color: rgba(191, 219, 254, 0.8);
+}
+
+/* Estilos para os ícones */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    margin-right: 10px;
+}
+
+/* Estilos para o resultado da cotação */
+.resultado-cotacao {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 16px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #bfdbfe;
+    position: relative;
+    overflow: hidden;
+}
+
+.resultado-cotacao:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, transparent 0%, rgba(59, 130, 246, 0.1) 100%);
+    border-radius: 0 0 0 100%;
+}
